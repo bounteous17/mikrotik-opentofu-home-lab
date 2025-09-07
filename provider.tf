@@ -5,17 +5,18 @@ terraform {
       source  = "hashicorp/aws"
       version = "6.12.0"
     }
-    mikrotik = {
+    routeros = {
       source  = "terraform-routeros/routeros"
       version = "1.86.3"
     }
   }
 }
 
-provider "mikrotik" {
-  hosturl  = var.mikrotik_host
-  username = var.mikrotik_username
-  password = var.mikrotik_password
+provider "routeros" {
+  hosturl        = var.mikrotik_host
+  username       = var.mikrotik_username
+  password       = var.mikrotik_password
+  ca_certificate = "cert_export_localCA.crt"
 }
 
 provider "aws" {
