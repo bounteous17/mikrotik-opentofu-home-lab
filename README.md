@@ -1,2 +1,9 @@
 # mikrotik-opentofu-home-lab
-Using mikrotik Terraform provider for IaC management
+Using Mikrotik Terraform provider for IaC management
+
+
+## Init
+
+```bash
+tofu init -backend-config=backend.conf
+```
